@@ -1,38 +1,23 @@
-public class Main {
-    
+ public class Main {
+  
     public static void main(String[] args) {
-        Car nissan = new  Car("Nissan",10000,2020,"Green");
-        Car dodge = new Car("Dodge",11000,2019, "Blue");
+        Person person = new Person("Rayan Slim", "Canadian", "01/01/1111", 5);
+       boolean choice = person.applyPassport();
 
-        Car nissan2 = new Car(nissan);
+       Person newp = new Person(person);
+       newp.setSeatNumber(newp.chooseSeat());
+       newp.setName("shema tonny");
 
-        nissan2.setColor("Yellow");
+        System.out.println("Name: " + person.getName() + "\n" + "Nationality: " + person.getNationality() + "\n" + "Date of Birth: " + person.getDateOfBirth() + "\n" + "Seat Number: " + newp.getSeatNumber() + "\n");
 
+        if (choice ==true){
+            System.out.println("Congratulations "+ person.getName()+ " . your passport was approved");
+           }else{
+            System.out.println("we are sorry "+ person.getName()+ " . we can not process your application");
+    
+           }
 
-        // nissan.setColor("Orange");
-        // nissan2.setColor("Blue");
-        // nissan.setColor("Purple");
-        // nissan2.setColor("Fuchsia");
-        // nissan.setColor("Beige");
-
-        nissan2.drive();
-
-
-
-
-        
-
-        // nissan.setColor("Jet Black");
-        // dodge.setColor("jet Black");
-
-        // nissan.setPrice(nissan.getPrice() /2);
-        // dodge.setPrice(dodge.getPrice() /2);
-
-        // System.out.println("This " + nissan.getMake() + " is worth $" + nissan.getPrice() + 
-        // ". It was built in " + nissan.getYear() + ". It is " + nissan.getColor() + ".\n");
-        // System.out.println("This " + dodge.getMake() + " is worth $" + dodge.getPrice()+ 
-        // ". It was built in " + dodge.getYear() + ". It is " + dodge.getColor() + ".\n");
-        
     }
-      
+  
+  
 }
